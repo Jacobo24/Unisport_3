@@ -60,3 +60,20 @@ if __name__ == "__main__":
 
     ensuciar(df, RNG).to_csv("data/raw/jugadores_raw.csv", index=False)
     print(df["AltoPotencial"].mean())   # comprueba prevalencia ~0.35
+
+def generar_dataset(n, seed=42, ruido=0.55):
+    """Genera un dataset limpio de n jugadores (sin ensuciar)."""
+    rng = np.random.default_rng(seed)
+    met = generar_metricas(n, rng)
+    score = score_latente(met, rng, ruido)
+    df = pd.concat([
+        pd.DataFrame({
+            "Jugador":  [f"J{i+1:03d}" for i in range(n)],
+            "Posicion": rng.choice(["Delantero","Centrocampista","Defensa","Extremo"],
+                                   n, p=[.25,.30,.25,.20]),
+            "Edad":     rng.integers(16, 20, n),
+        }),
+        met.round(2),
+    ], axis=1)
+    df["AltoPotencial"] = (score > np.quantile(score, 0.65)).astype(int)
+    return df
