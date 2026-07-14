@@ -20,6 +20,7 @@ mediante código.
 ├── informe/
 |   ├── Documento.pdf
 |   ├── tablas/   # Tablas exportadas a LaTeX desde los notebooks  
+├── models/           # Pipelines entrenados y partición train/test (joblib)  
 └── requirements.txt  
 
 ## Reproducir el análisis
