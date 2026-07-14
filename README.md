@@ -18,8 +18,8 @@ mediante código.
 │   └── 04_tamano_muestral.ipynb        # Curva de aprendizaje (AUC vs n)  
 ├── figures/          # Figuras en PDF que importa el informe LaTeX  
 ├── informe/  
-|   ├── Documento.pdf  
-|   └── tablas/   # Tablas exportadas a LaTeX desde los notebooks  
+│   ├── Documento.pdf  
+│   └── tablas/   # Tablas exportadas a LaTeX desde los notebooks  
 ├── models/           # Pipelines entrenados y partición train/test (joblib)  
 └── requirements.txt  
 
