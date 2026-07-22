@@ -1,0 +1,9 @@
+MetricaID;Metrica;Unidad;Dimension;Direccion
+PrecisionPase;Precisión de pase;%;Técnica;Mayor es mejor
+VelReaccion;Velocidad de reacción;s;Cognitiva;Menor es mejor
+Efectividad1v1;Efectividad 1v1;%;Técnica;Mayor es mejor
+VelSprint;Velocidad de sprint;km/h;Física;Mayor es mejor
+DistAltaInt;Dist. alta intensidad;x100 m/90';Física;Mayor es mejor
+AciertoRegate;Acierto en regate;%;Técnica;Mayor es mejor
+Recuperaciones;Recuperaciones;por 90';Táctica;Mayor es mejor
+TomaDecision;Toma de decisiones;0-10;Cognitiva;Mayor es mejor
